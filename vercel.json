@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "name": "java-learning-journey",
+  "builds": [
+    {
+      "src": "BankingProject/Portfolio/simple-bank-frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "BankingProject/Portfolio/simple-bank-frontend/build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/BankingProject/Portfolio/simple-bank-frontend/build/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/BankingProject/Portfolio/simple-bank-frontend/build/index.html"
+    }
+  ],
+  "functions": {
+    "BankingProject/Portfolio/simple-bank-frontend/src/**": {
+      "runtime": "@vercel/node@18"
+    }
+  }
+}
