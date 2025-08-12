@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "simple-bank-system",
+  "builds": [
+    {
+      "src": "Portfolio/simple-bank-frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"  
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/Portfolio/simple-bank-frontend/build/index.html"
+    }
+  ]
+}

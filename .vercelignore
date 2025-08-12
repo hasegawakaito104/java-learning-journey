@@ -1,0 +1,16 @@
+# Java学習ファイル
+Day01/
+Day02/
+Day03/
+CLAUDE.md
+
+# バックエンドファイル
+BankingProject/Portfolio/simple-bank-backend/
+BankingProject/Study/
+BankingProject/Interview/
+BankingProject/開発記録.md
+BankingProject/Planning/
+
+# その他
+*.class
+*.java
